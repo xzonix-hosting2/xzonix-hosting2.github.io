@@ -5,76 +5,63 @@
 <p>:D</p>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Etiqueta para adaptar a @media -->
-  <LINK REL="stylesheet" TYPE="text/css" HREF="estiloscalculadora.css"><!-- Enlace hoja estilos -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link href="calculadora.css" rel="stylesheet" type="text/css" media="all" />
 </head>
+
 <body>
-<!-- Empieza codigo calculadora html-->
-  <form name="calculator">
-    <h3>Calculator <a href="#">Xzonix</a></h3>
-    <p>What's up!</p>
-    <input type="textfield" name="ans" value="">
-    <br>
-    <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
-    <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
-    <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
-    <input type="button" value="+" onClick="document.calculator.ans.value+='+'">
-    <br>
-    <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
-    <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
-    <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
-    <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
-    <br>
-    <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
-    <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
-    <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
-    <input type="button" value="*" onClick="document.calculator.ans.value+='*'">
-    <br>
-    <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
-    <input type="reset" value="c">
-    <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
-    <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+  <div id="calculadora">
+    <form name="form">
+      <h1 id='title'>Calculadora</h1>
+      <input type="text" class="vsaida" id="visor" name="visor">
     </form>
+    <table id="teclado">
+      <td>
+        <input type="button" class="limpar" id="buttonC" onclick="zerar(0)" value="C">
+        <input type="button" class="botaoAux" id="backspace" onclick="backspace()" value="⌫">
+        <input type="button" class="botaoAux" onclick="porcentagem()" value="%">
+        <input type="button" class="divisao" id="divisao" onclick="operacao('/')" value="÷">
+      </td>
+      <tr>
+        <td>
+          <input type="button" class='numero' onclick="preencher(7)" value="7">
+          <input type="button" class='numero' onclick="preencher(8)" value="8">
+          <input type="button" class='numero' onclick="preencher(9)" value="9">
+          <input type="button" class="multiplicacao" onclick="operacao('*')" value="x">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" class='numero' onclick="preencher(4)" value="4">
+          <input type="button" class='numero' onclick="preencher(5)" value="5">
+          <input type="button" class='numero' onclick="preencher(6)" value="6">
+          <input type="button" class="subtracao" onclick="operacao('-')" value="-">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" class='numero' onclick="preencher(1)" value="1">
+          <input type="button" class='numero' onclick="preencher(2)" value="2">
+          <input type="button" class='numero' onclick="preencher(3)" value="3">
+          <input type="button" class="soma" onclick="operacao('+')" value="+">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" class="botaoAux" id="negativo" onclick="maisMenos()" value="+/-">
+          <input type="button" class='numero' onclick="preencher(0)" value="0">
+          <input type="button" class="botaoAux" id="ponto" onclick="ponto()" value=".">
+          <input type="button" class="igual" onclick='calcular()' value="=">
+        </td>
+      </tr>
+    </table>
+  </div>
 </body>
+<script type="text/javascript" src="calculadora.js"></script>
+
 </html>
-<!-- Finaliza codigo calculadora html -->
- 
- 
-<!-- Documento CSS-->
-form {
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-  border: solid 1px #c2c2c2;
-  padding-bottom: 10px;
-  margin: auto;
-  background: #fafafa;
-}
-input[type=textfield] {
-    width: 75%;
-    padding: 16px 32px;
-    font-size: 16px;
-    margin: 8px 0;
-    border: 1px solid silver;
-    border-radius: 1px;
-    text-align: left;
-    color: #333;
-    background: #ccc;
-}
-input[type=button], input[type=submit], input[type=reset] {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    font-size: 16px;
-    min-width: 21%;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
-  background-color: #333;
-}
