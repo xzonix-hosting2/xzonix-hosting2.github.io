@@ -6,62 +6,57 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora</title>
-  <link href="calculadora.css" rel="stylesheet" type="text/css" media="all" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
 </head>
-
 <body>
-  <div id="calculadora">
-    <form name="form">
-      <h1 id='title'>Calculadora</h1>
-      <input type="text" class="vsaida" id="visor" name="visor">
-    </form>
-    <table id="teclado">
-      <td>
-        <input type="button" class="limpar" id="buttonC" onclick="zerar(0)" value="C">
-        <input type="button" class="botaoAux" id="backspace" onclick="backspace()" value="⌫">
-        <input type="button" class="botaoAux" onclick="porcentagem()" value="%">
-        <input type="button" class="divisao" id="divisao" onclick="operacao('/')" value="÷">
-      </td>
-      <tr>
-        <td>
-          <input type="button" class='numero' onclick="preencher(7)" value="7">
-          <input type="button" class='numero' onclick="preencher(8)" value="8">
-          <input type="button" class='numero' onclick="preencher(9)" value="9">
-          <input type="button" class="multiplicacao" onclick="operacao('*')" value="x">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <input type="button" class='numero' onclick="preencher(4)" value="4">
-          <input type="button" class='numero' onclick="preencher(5)" value="5">
-          <input type="button" class='numero' onclick="preencher(6)" value="6">
-          <input type="button" class="subtracao" onclick="operacao('-')" value="-">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <input type="button" class='numero' onclick="preencher(1)" value="1">
-          <input type="button" class='numero' onclick="preencher(2)" value="2">
-          <input type="button" class='numero' onclick="preencher(3)" value="3">
-          <input type="button" class="soma" onclick="operacao('+')" value="+">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <input type="button" class="botaoAux" id="negativo" onclick="maisMenos()" value="+/-">
-          <input type="button" class='numero' onclick="preencher(0)" value="0">
-          <input type="button" class="botaoAux" id="ponto" onclick="ponto()" value=".">
-          <input type="button" class="igual" onclick='calcular()' value="=">
-        </td>
-      </tr>
-    </table>
-  </div>
+    <div class="container">
+        <div class="calculator dark">
+            <div class="theme-toggler active">
+                <i class="toggler-icon"></i>
+            </div>
+            <div class="display-screen">
+                <div id="display"></div>
+            </div>
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td><button class="btn-operator" id="clear">C</button></td>
+                        <td><button class="btn-operator" id="/">&divide;</button></td>
+                        <td><button class="btn-operator" id="*">&times;</button></td>
+                        <td><button class="btn-operator" id="backspace"><</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="7">7</button></td>
+                        <td><button class="btn-number" id="8">8</button></td>
+                        <td><button class="btn-number" id="9">9</button></td>
+                        <td><button class="btn-operator" id="-">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="4">4</button></td>
+                        <td><button class="btn-number" id="5">5</button></td>
+                        <td><button class="btn-number" id="6">6</button></td>
+                        <td><button class="btn-operator" id="+">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="1">1</button></td>
+                        <td><button class="btn-number" id="2">2</button></td>
+                        <td><button class="btn-number" id="3">3</button></td>
+                        <td rowspan="2"><button class="btn-equal" id="equal">=</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-operator" id="(">(</button></td>
+                        <td><button class="btn-number" id="0">0</button></td>
+                        <td><button class="btn-operator" id=")">)</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
-<script type="text/javascript" src="calculadora.js"></script>
-
 </html>
