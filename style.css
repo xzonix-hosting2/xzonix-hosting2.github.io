@@ -36,3 +36,7 @@ h1{
 .navbar li{
     float: left;
 }
+
+#boton {
+display: none;
+}
