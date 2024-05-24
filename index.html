@@ -1,50 +1,28 @@
 <!DOCTYPE html>
-<!-- programado por xzonix -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fran</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- google fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <a class="logo" href="#">Fran<span>.</span></a>
-        <ul class="menu-links">
-          <span id="close-menu-btn" class="material-symbols-outlined">close</span>
-          <li><a href="weather">Weather</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="battery">Battery</a></li>
-          <li><a href="shorty">Shorty</a></li>
-        </ul>
-        <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
-      </nav>
-    </header>
-
-    <section class="hero-section">
-      <div class="content">
-        <h2>Welcome to Fran's website!</h2>
-        <p>
-          Hey there, this is my website! 
-          This website has been created for fun, but the idea is for it to be a useful website!
-        </p>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet"/>
+  <title>xzonix</title>
+</head>
+<body>
+  <main>
+    <img src="./images/github.png" alt="profile" class="profile-image" />
+    <h1 class="profile-name">xzonix</h1>
+    <p class="summary">😎Cool dev | Learning HTML, CSS, and JS </p>
+    <section class="about">
+      <span class="about__title">More about me:</span>
+      <ul class="about__list">
+        <li><a href="xz1@dr.com">Email</a></li>
+        <li><a href="https://xzonix.blogspot.com/">Blog</a></li>
+      </ul>
     </section>
-
-    <script>
-      const header = document.querySelector("header");
-      const hamburgerBtn = document.querySelector("#hamburger-btn");
-      const closeMenuBtn = document.querySelector("#close-menu-btn");
-
-      // menu de celular
-      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
-
-      // cerrar menu con 1 solo click
-      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
-    </script>
-    
-  </body>
+    <ul class="list-links">
+      <li><a href="https://github.com/xzonix" target="_blank">Github</a></li>
+      <li><a href="https://twitter.com/ImOni_Xx" target="_blank">Twitter</a></li>
+    </ul>
+  </main>
+</body>
 </html>
