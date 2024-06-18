@@ -1,3 +1,4 @@
+// This is the JavaScript of the 404 page.
 (function() {
     // Función para verificar si la página existe mediante fetch
     function checkPageExistence(page, callback) {
